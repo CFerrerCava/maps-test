@@ -66,6 +66,23 @@ class LayerState extends State {
     await controller.addGeoJsonSource("points", _points);
     await controller.addGeoJsonSource("moving", _movingFeature(0));
 
+    controller.addFill(FillOptions(geometry: [
+      [
+        LatLng(151.178099204457737, -33.901517742631846),
+        LatLng(151.179025547977773, -33.872845324482071),
+        LatLng(151.147000529140399, -33.868230472039514),
+        LatLng(151.150838238009328, -33.883172899638311),
+        LatLng(151.14223647675135, -33.894158309528244),
+        LatLng(151.155999294764086, -33.904812805307806),
+        LatLng(151.178099204457737, -33.901517742631846)
+      ],
+      [
+        LatLng(151.162657925954278, -33.879168932438581),
+        LatLng(151.155323416087612, -33.890737666431583),
+        LatLng(151.173659690754278, -33.897637567778119),
+        LatLng(151.162657925954278, -33.879168932438581)
+      ]
+    ]));
     //new style of adding sources
     await controller.addSource("fills", GeojsonSourceProperties(data: _fills));
 
